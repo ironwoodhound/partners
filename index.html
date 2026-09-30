@@ -150,8 +150,8 @@
 
 <script>
   // Filled in once the Google side is set up (Ironwood account only).
-  const SUBMIT_URL = '';   // Apps Script web app that saves each answer to the Partner Inquiries sheet and emails Jonathan
-  const BOOKING_URL = '';  // Google Calendar booking page, 15-minute calls, 9 AM to 9 PM every day
+  const SUBMIT_URL = 'https://script.google.com/macros/s/AKfycbx5TNNPoTYyfYxW5HN7TYOXYP0-eY9qVxotSMqXj7lOk77bF598G6wNbpujBl9JgHi1/exec';   // Apps Script web app that saves each answer to the Partner Inquiries sheet and emails Jonathan
+  const BOOKING_URL = 'https://calendar.app.google/BJKGVfC6qeW19y716';  // Google Calendar booking page, 15-minute phone calls, Mon-Fri 9 AM-9 PM, Sat 9 AM-2 PM, no Sundays
 
   const book = document.getElementById('book');
   if (BOOKING_URL) book.href = BOOKING_URL; else book.style.display = 'none';
