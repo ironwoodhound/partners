@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Partner with Ironwood Hound</title>
+<meta name="description" content="Brand partners: tell us about your brand and what you'd like from us. A real person replies within 48 hours.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="https://cdn.shopify.com/s/files/1/0781/8860/9722/files/ironwood-hound-icon-clear.png?v=1790062547">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--page:#FBF9F5;--cream:#F4EFE6;--charcoal:#2B2622;--brass:#C9A876;--brown:#8A6440;--text:#4A423A;--muted:#7d736a;--err:#9b3b2f}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{min-height:100%}
+  body{font-family:'Montserrat',Arial,sans-serif;color:var(--text);font-size:15px;line-height:1.55;background:var(--charcoal)}
+  /* Photo behind the glass card */
+  .bg{position:fixed;inset:0;background:url('https://cdn.shopify.com/s/files/1/0781/8860/9722/files/photo-1645395538294-40059d468340.jpg?v=1790222950&width=1800') center 40%/cover no-repeat;z-index:-2}
+  .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,38,34,.55) 0%,rgba(43,38,34,.35) 40%,rgba(43,38,34,.7) 100%)}
+  .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px 16px}
+  .card{width:100%;max-width:620px;padding:40px 44px 34px;border-radius:18px;
+    background:rgba(251,249,245,.74);
+    -webkit-backdrop-filter:blur(22px) saturate(140%);backdrop-filter:blur(22px) saturate(140%);
+    border:1px solid rgba(255,255,255,.55);
+    box-shadow:0 30px 80px rgba(20,16,12,.35), inset 0 1px 0 rgba(255,255,255,.6)}
+  @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.card{background:rgba(251,249,245,.95)}}
+  .logo{display:block;height:46px;margin:0 auto 22px}
+  .eyebrow{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--brown);font-weight:600;text-align:center}
+  h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;color:var(--charcoal);font-size:38px;line-height:1.08;text-align:center;margin:10px 0 10px}
+  .lede{text-align:center;color:var(--text);max-width:460px;margin:0 auto}
+  .rule{height:1px;background:var(--brass);opacity:.7;margin:26px 0 22px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{margin-bottom:16px}
+  label,.legend{display:block;font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--charcoal);margin-bottom:6px}
+  .opt{font-weight:400;color:var(--muted);letter-spacing:0}
+  input,textarea{width:100%;font:inherit;color:var(--charcoal);background:rgba(255,255,255,.7);border:1px solid rgba(138,100,64,.28);border-radius:10px;padding:12px 14px;outline:none;transition:border-color .2s, box-shadow .2s, background .2s}
+  textarea{min-height:96px;resize:vertical}
+  input:focus,textarea:focus{border-color:var(--brass);background:#fff;box-shadow:0 0 0 3px rgba(201,168,118,.25)}
+  .chips{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .chip{position:relative}
+  .chip input{position:absolute;opacity:0;pointer-events:none}
+  .chip span{display:flex;align-items:center;gap:10px;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid rgba(138,100,64,.28);background:rgba(255,255,255,.55);cursor:pointer;font-size:14px;color:var(--charcoal);transition:all .2s}
+  .chip span::before{content:"";flex:none;width:16px;height:16px;border-radius:4px;border:1.5px solid var(--brown);background:#fff;transition:all .2s}
+  .chip input:checked + span{border-color:var(--brass);background:rgba(244,239,230,.95);box-shadow:0 0 0 2px rgba(201,168,118,.35)}
+  .chip input:checked + span::before{background:var(--brown) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat;border-color:var(--brown)}
+  .chip input:focus-visible + span{outline:2px solid var(--brass);outline-offset:2px}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .err{display:none;color:var(--err);font-size:12.5px;margin-top:6px}
+  .invalid .err{display:block}
+  .invalid input,.invalid .chip span{border-color:var(--err)}
+  button{width:100%;margin-top:8px;padding:15px 18px;border:0;border-radius:10px;background:var(--charcoal);color:#fff;font:600 13px 'Montserrat',Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:transform .15s, background .2s}
+  button:hover{background:#3a332e}
+  button:active{transform:translateY(1px)}
+  button[disabled]{opacity:.6;cursor:default}
+  .promise{text-align:center;font-size:12.5px;color:var(--muted);margin-top:12px}
+  .alt{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px;padding-top:18px;border-top:1px solid rgba(201,168,118,.5)}
+  .alt a{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid var(--brass);color:var(--charcoal);text-decoration:none;font-size:13px;font-weight:500;background:rgba(255,255,255,.45);transition:background .2s}
+  .alt a:hover{background:rgba(255,255,255,.85)}
+  .done{display:none;text-align:center;padding:10px 0 4px}
+  .done h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;color:var(--charcoal);font-size:32px;margin:12px 0 8px}
+  .check{width:58px;height:58px;border-radius:50%;margin:0 auto;display:grid;place-items:center;background:var(--charcoal)}
+  .sent .form-body{display:none}
+  .sent .done{display:block}
+  .foot{text-align:center;color:rgba(255,255,255,.75);font-size:12px;margin-top:18px;letter-spacing:.04em}
+  .foot a{color:inherit}
+  @media (max-width:560px){
+    .card{padding:30px 20px 26px;border-radius:14px}
+    h1{font-size:31px}
+    .row,.chips{grid-template-columns:1fr}
+    .logo{height:40px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<main class="wrap">
+  <div>
+    <div class="card" id="card">
+      <img class="logo" src="https://cdn.shopify.com/s/files/1/0781/8860/9722/files/ironwood-hound-logo-wide-light.png?v=1790062546" alt="Ironwood Hound">
+      <div class="form-body">
+        <div class="eyebrow">For brand partners</div>
+        <h1>Let's work together</h1>
+        <p class="lede">Tell us about your brand and what you'd like from us. It takes about a minute, and a real person replies within 48 hours.</p>
+        <div class="rule"></div>
+
+        <form id="f" novalidate>
+          <div class="row">
+            <div class="field" data-req>
+              <label for="name">Your name</label>
+              <input id="name" name="name" autocomplete="name" maxlength="120">
+              <div class="err">Please add your name.</div>
+            </div>
+            <div class="field" data-req>
+              <label for="company">Company or brand</label>
+              <input id="company" name="company" autocomplete="organization" maxlength="160">
+              <div class="err">Please add your company.</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field" data-req data-email>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" maxlength="200">
+              <div class="err">Please add a valid email.</div>
+            </div>
+            <div class="field">
+              <label for="phone">Phone <span class="opt">(optional)</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
+            </div>
+          </div>
+
+          <fieldset class="field" data-chips style="border:0">
+            <legend class="legend">What would you like from us?</legend>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" name="want" value="Dealer terms"><span>Dealer terms and our setup</span></label>
+              <label class="chip"><input type="checkbox" name="want" value="Store preview"><span>A private store preview</span></label>
+              <label class="chip"><input type="checkbox" name="want" value="Call"><span>A call with Jonathan</span></label>
+              <label class="chip"><input type="checkbox" name="want" value="Other"><span>Something else</span></label>
+            </div>
+            <div class="err">Please pick at least one.</div>
+          </fieldset>
+
+          <div class="field">
+            <label for="notes">Anything we should know? <span class="opt">(optional)</span></label>
+            <textarea id="notes" name="notes" maxlength="2000" placeholder="Products, programs, questions for us"></textarea>
+          </div>
+
+          <div class="hp" aria-hidden="true"><label>Leave empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+
+          <button type="submit" id="go">Send</button>
+          <p class="promise">A real person replies within 48 hours, usually sooner.</p>
+        </form>
+      </div>
+
+      <div class="done" role="status" aria-live="polite">
+        <div class="check"><svg width="26" height="26" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="#C9A876" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h2>Thank you</h2>
+        <p class="lede">We have your details. Jonathan will reply within 48 hours, usually sooner.</p>
+      </div>
+
+      <div class="alt">
+        <a id="book" href="#" data-booking>Book a 15-minute call</a>
+        <a href="tel:+14754194315">Call (475) 419-4315</a>
+        <a href="mailto:jonathan@ironwoodhound.com">jonathan@ironwoodhound.com</a>
+      </div>
+    </div>
+    <p class="foot">Ironwood Hound · Gear for large dogs · <a href="https://ironwoodhound.com">ironwoodhound.com</a></p>
+  </div>
+</main>
+
+<script>
+  // Filled in once the Google side is set up (Ironwood account only).
+  const SUBMIT_URL = '';   // Apps Script web app that saves each answer to the Partner Inquiries sheet and emails Jonathan
+  const BOOKING_URL = '';  // Google Calendar booking page, 15-minute calls, 9 AM to 9 PM every day
+
+  const book = document.getElementById('book');
+  if (BOOKING_URL) book.href = BOOKING_URL; else book.style.display = 'none';
+
+  const form = document.getElementById('f');
+  const card = document.getElementById('card');
+  const go = document.getElementById('go');
+  const emailOk = v => /^[^\s@<>"]+@[^\s@<>"]+\.[^\s@<>"]{2,}$/.test(v);
+
+  function check() {
+    let first = null;
+    form.querySelectorAll('[data-req]').forEach(f => {
+      const input = f.querySelector('input');
+      const v = input.value.trim();
+      const bad = !v || (f.hasAttribute('data-email') && !emailOk(v));
+      f.classList.toggle('invalid', bad);
+      if (bad && !first) first = input;
+    });
+    const chips = form.querySelector('[data-chips]');
+    const none = !form.querySelector('input[name="want"]:checked');
+    chips.classList.toggle('invalid', none);
+    if (none && !first) first = chips.querySelector('input');
+    if (first) first.focus();
+    return !first;
+  }
+  form.addEventListener('input', e => { const f = e.target.closest('.invalid'); if (f) f.classList.remove('invalid'); });
+  form.addEventListener('change', e => { const f = e.target.closest('.invalid'); if (f) f.classList.remove('invalid'); });
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (!check()) return;
+    if (form.website.value) { card.classList.add('sent'); return; } // bot filled the hidden field
+    const data = {
+      submittedAt: new Date().toISOString(),
+      name: form.name.value.trim(),
+      company: form.company.value.trim(),
+      email: form.email.value.trim(),
+      phone: form.phone.value.trim(),
+      want: [...form.querySelectorAll('input[name="want"]:checked')].map(i => i.value).join(', '),
+      notes: form.notes.value.trim(),
+      source: new URLSearchParams(location.search).get('from') || ''
+    };
+    go.disabled = true; go.textContent = 'Sending…';
+    try {
+      if (SUBMIT_URL) await fetch(SUBMIT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(data) });
+      card.classList.add('sent');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (err) {
+      go.disabled = false; go.textContent = 'Send';
+      alert('That didn’t go through. Please email jonathan@ironwoodhound.com or call (475) 419-4315.');
+    }
+  });
+</script>
+</body>
+</html>
