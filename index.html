@@ -10,22 +10,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{--page:#FBF9F5;--cream:#F4EFE6;--charcoal:#2B2622;--brass:#C9A876;--brown:#8A6440;--text:#4A423A;--muted:#7d736a;--err:#9b3b2f}
+  :root{--page:#FBF9F5;--cream:#F4EFE6;--charcoal:#2B2622;--brass:#C9A876;--brown:#8A6440;--text:#4A423A;--muted:#62594f;--err:#9b3b2f}
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{min-height:100%}
   body{font-family:'Montserrat',Arial,sans-serif;color:var(--text);font-size:15px;line-height:1.55;background:var(--charcoal)}
   /* Photo behind the glass card */
   .bg{position:fixed;inset:0;background:url('https://cdn.shopify.com/s/files/1/0781/8860/9722/files/photo-1645395538294-40059d468340.jpg?v=1790222950&width=1800') center 40%/cover no-repeat;z-index:-2}
-  .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,38,34,.55) 0%,rgba(43,38,34,.35) 40%,rgba(43,38,34,.7) 100%)}
+  .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,38,34,.45) 0%,rgba(43,38,34,.22) 40%,rgba(43,38,34,.6) 100%)}
   .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px 16px}
   .card{width:100%;max-width:620px;padding:40px 44px 34px;border-radius:18px;
-    background:rgba(251,249,245,.74);
-    -webkit-backdrop-filter:blur(22px) saturate(140%);backdrop-filter:blur(22px) saturate(140%);
-    border:1px solid rgba(255,255,255,.55);
+    background:rgba(251,249,245,.22);
+    -webkit-backdrop-filter:blur(12px) saturate(160%) brightness(1.12);backdrop-filter:blur(12px) saturate(160%) brightness(1.12);
+    border:1px solid rgba(255,255,255,.6);
     box-shadow:0 30px 80px rgba(20,16,12,.35), inset 0 1px 0 rgba(255,255,255,.6)}
   @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.card{background:rgba(251,249,245,.95)}}
   .logo{display:block;height:46px;margin:0 auto 22px}
-  .eyebrow{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--brown);font-weight:600;text-align:center}
+  .eyebrow{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#5e4128;font-weight:600;text-align:center;text-shadow:0 1px 8px rgba(255,255,255,.55)}
   h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;color:var(--charcoal);font-size:38px;line-height:1.08;text-align:center;margin:10px 0 10px}
   .lede{text-align:center;color:var(--text);max-width:460px;margin:0 auto}
   .rule{height:1px;background:var(--brass);opacity:.7;margin:26px 0 22px}
@@ -33,13 +33,13 @@
   .field{margin-bottom:16px}
   label,.legend{display:block;font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--charcoal);margin-bottom:6px}
   .opt{font-weight:400;color:var(--muted);letter-spacing:0}
-  input,textarea{width:100%;font:inherit;color:var(--charcoal);background:rgba(255,255,255,.7);border:1px solid rgba(138,100,64,.28);border-radius:10px;padding:12px 14px;outline:none;transition:border-color .2s, box-shadow .2s, background .2s}
+  input,textarea{width:100%;font:inherit;color:var(--charcoal);background:rgba(255,255,255,.82);border:1px solid rgba(138,100,64,.28);border-radius:10px;padding:12px 14px;outline:none;transition:border-color .2s, box-shadow .2s, background .2s}
   textarea{min-height:96px;resize:vertical}
   input:focus,textarea:focus{border-color:var(--brass);background:#fff;box-shadow:0 0 0 3px rgba(201,168,118,.25)}
   .chips{display:grid;grid-template-columns:1fr 1fr;gap:10px}
   .chip{position:relative}
   .chip input{position:absolute;opacity:0;pointer-events:none}
-  .chip span{display:flex;align-items:center;gap:10px;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid rgba(138,100,64,.28);background:rgba(255,255,255,.55);cursor:pointer;font-size:14px;color:var(--charcoal);transition:all .2s}
+  .chip span{display:flex;align-items:center;gap:10px;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid rgba(138,100,64,.28);background:rgba(255,255,255,.72);cursor:pointer;font-size:14px;color:var(--charcoal);transition:all .2s}
   .chip span::before{content:"";flex:none;width:16px;height:16px;border-radius:4px;border:1.5px solid var(--brown);background:#fff;transition:all .2s}
   .chip input:checked + span{border-color:var(--brass);background:rgba(244,239,230,.95);box-shadow:0 0 0 2px rgba(201,168,118,.35)}
   .chip input:checked + span::before{background:var(--brown) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat;border-color:var(--brown)}
@@ -52,7 +52,7 @@
   button:hover{background:#3a332e}
   button:active{transform:translateY(1px)}
   button[disabled]{opacity:.6;cursor:default}
-  .promise{text-align:center;font-size:12.5px;color:var(--muted);margin-top:12px}
+  .promise{text-align:center;font-size:12.5px;color:var(--text);margin-top:12px;text-shadow:0 1px 8px rgba(255,255,255,.5)}
   .alt{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px;padding-top:18px;border-top:1px solid rgba(201,168,118,.5)}
   .alt a{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid var(--brass);color:var(--charcoal);text-decoration:none;font-size:13px;font-weight:500;background:rgba(255,255,255,.45);transition:background .2s}
   .alt a:hover{background:rgba(255,255,255,.85)}
@@ -114,7 +114,7 @@
             <div class="chips">
               <label class="chip"><input type="checkbox" name="want" value="Dealer terms"><span>Dealer terms and our setup</span></label>
               <label class="chip"><input type="checkbox" name="want" value="Store preview"><span>A private store preview</span></label>
-              <label class="chip"><input type="checkbox" name="want" value="Call"><span>A call with Jonathan</span></label>
+              <label class="chip"><input type="checkbox" name="want" value="Call"><span>Book a call</span></label>
               <label class="chip"><input type="checkbox" name="want" value="Other"><span>Something else</span></label>
             </div>
             <div class="err">Please pick at least one.</div>
